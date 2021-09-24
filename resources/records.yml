@@ -1,0 +1,27 @@
+Testing something
+In this example the specification is taken from external YAML file
+---
+tags:
+  - Records
+parameters:
+  - in: args
+    name: user
+    description: foo
+    type: string
+    example:
+      name: "Max"
+definitions:
+  Hello:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    description: A String saying hello
+    schema:
+      $ref: "#/definitions/Hello"
+  201:
+    description: A String saying hello
+    schema:
+      $ref: "#/definitions/Hello"
